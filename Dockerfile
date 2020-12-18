@@ -9,4 +9,4 @@ COPY helium /root/helium
 # Build Helium
 RUN cd /root/helium && mkdir build && cd build && cmake .. && make
 # Install clang and Helium to convenient locations
-RUN ln -s `which clang-9` /usr/local/bin/clang && ln -s ./lib/libhelium.so /usr/local/lib
+RUN ln -s `which clang-9` /usr/local/bin/clang && ln -s $PWD/lib/libhelium.so /usr/local/lib
